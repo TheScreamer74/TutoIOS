@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="FuD-NL-i2e" customClass="MealViewController" customModule="FoodTracked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="23i-i1-uks">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Nh-2c-YYO">
-                                <rect key="frame" x="16" y="76" width="382" height="482"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Nh-2c-YYO">
+                                <rect key="frame" x="16" y="108" width="382" height="476"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xD0-UU-J7X">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
@@ -33,8 +33,8 @@
                                             <outletCollection property="gestureRecognizers" destination="QFn-sJ-8Ua" appends="YES" id="HHz-ph-Mb6"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1vX-T3-BST" customClass="RatingControl" customModule="FoodTracked" customModuleProvider="target">
-                                        <rect key="frame" x="65" y="432" width="252" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1vX-T3-BST" customClass="RatingControl" customModule="FoodTracked" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="432" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -50,9 +50,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7JD-MW-X8d"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="save" id="BT7-ya-2uT"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="New Meal" id="3qi-jj-nVw">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="08C-pY-QBw">
                             <connections>
@@ -121,6 +119,7 @@
                                     <outlet property="nameLabel" destination="jv8-UN-IlK" id="lTb-mT-A8X"/>
                                     <outlet property="photoImageView" destination="VH3-PJ-cDE" id="NVq-aJ-pqw"/>
                                     <outlet property="ratingControl" destination="RFM-c4-bbu" id="3Ra-K7-dJn"/>
+                                    <segue destination="FuD-NL-i2e" kind="show" identifier="ShowDetails" id="RwR-Uf-Wzt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -175,9 +174,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ef-So-bAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157.9710144927537" y="101.78571428571428"/>
+            <point key="canvasLocation" x="1193" y="-378"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RwR-Uf-Wzt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
